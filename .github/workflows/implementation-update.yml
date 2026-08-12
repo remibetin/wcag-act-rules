@@ -25,4 +25,6 @@ jobs:
       - run: node ./.github/scripts/implementation-update.mjs
       - name: Commit and push
         run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           npx zx ./.github/scripts/commit-and-push.mjs
