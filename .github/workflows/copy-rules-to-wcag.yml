@@ -49,8 +49,8 @@ jobs:
         run: |
           echo "Commit"
           cd wcag
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name github-actions
+          git config user.email github-actions@github.com
           git add .
           # check for changes with git diff-index to stop error
           git diff-index --quiet HEAD || git commit -m "$COMMIT_MESSAGE"
