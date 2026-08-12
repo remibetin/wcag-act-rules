@@ -189,3 +189,24 @@
   standards:
     - WCAG 2.2 Level A, AA, AAA
   jsonReport: http://help.usablenet.com/aqa-act-r/reports/UsableNet-AQA-WCAG2.2-semi-auto.json
+
+- name: "@accesslint/core"
+  vendor: accesslint
+  homepage: https://github.com/AccessLint/accesslint
+  vendorHomepage: https://github.com/AccessLint/
+  uniqueKey: accesslint-core
+  type: Automated tool
+  standards:
+    - WCAG 2.2 Level A, AA, AAA
+  jsonReport: https://accesslint.github.io/accesslint/earl-report-browser.json
+
+
+- name: "Test implementation"
+  vendor: test
+  homepage: https://w3.org/
+  vendorHomepage: https://w3.org/
+  uniqueKey: test
+  type: Automated tool
+  standards:
+    - WCAG 2.2 Level A, AA, AAA
+  jsonReport: https://remibetin.github.io/test-host/act-report.json
