@@ -205,7 +205,7 @@
   vendor: test
   homepage: https://w3.org/
   vendorHomepage: https://w3.org/
-  uniqueKey: test-implementation
+  uniqueKey: test
   type: Automated tool
   standards:
     - WCAG 2.2 Level A, AA, AAA
