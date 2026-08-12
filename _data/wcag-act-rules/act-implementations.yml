@@ -199,3 +199,14 @@
   standards:
     - WCAG 2.2 Level A, AA, AAA
   jsonReport: https://accesslint.github.io/accesslint/earl-report-browser.json
+
+
+- name: "Test implementation"
+  vendor: test
+  homepage: https://w3.org/
+  vendorHomepage: https://w3.org/
+  uniqueKey: test-implementation
+  type: Automated tool
+  standards:
+    - WCAG 2.2 Level A, AA, AAA
+  jsonReport: https://remibetin.github.io/test-host/act-report.json
