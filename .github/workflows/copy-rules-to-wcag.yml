@@ -11,7 +11,8 @@ name: Copy-rules-to-WCAG
 #   - Suggest this is set in a specific W3C account, rather a user account, so not accidently deleted
 # - GitHub shows in the commit message a linkto the ACT repo commit
 
-on: 
+on:
+  workflow_dispatch: 
   push:
     branches:
       - publication
@@ -22,15 +23,17 @@ jobs:
   copy-rules:
     name: Copy rules
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     env:
       SOURCE_FILENAME: wcag-mapping.json
-      DESTINATION_REPO: w3c/wcag
+      DESTINATION_REPO: remibetin/wcag
       DESTINATION_BRANCH: main
       DESTINATION_FILENAME: guidelines/act-mapping.json
       COMMIT_MESSAGE: ACT rules update from https://github.com/${{ github.repository }}/commit/${{ github.sha }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 #v7.0.1
         with:
           path: this
           
