@@ -2,7 +2,7 @@
   "vendor": "PowerMapper",
   "name": "SortSite",
   "version": 6.55,
-  "lastModified": "4 September 2026",
+  "lastModified": "19 September 2026",
   "approvedRules": {
     "complete": 33,
     "partial": 1,
@@ -10,8 +10,8 @@
     "untested": 3
   },
   "proposedRules": {
-    "complete": 8,
-    "partial": 2,
+    "complete": 9,
+    "partial": 1,
     "inconsistent": 0,
     "untested": 40
   },
@@ -11819,7 +11819,7 @@
       "procedureNames": [
         "AccHtmlControlLabelInAccName"
       ],
-      "consistency": "partial",
+      "consistency": "complete",
       "accessibilityRequirements": {
         "correct": true,
         "expected": [
@@ -11830,8 +11830,8 @@
         ]
       },
       "coverage": {
-        "covered": 37,
-        "untested": 1,
+        "covered": 38,
+        "untested": 0,
         "cantTell": 0,
         "testCaseTotal": 38
       },
@@ -12401,7 +12401,7 @@
             {
               "procedureName": "AccHtmlControlLabelInAccName",
               "outcomes": [
-                "untested"
+                "passed"
               ]
             }
           ]
