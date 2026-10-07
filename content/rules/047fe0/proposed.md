@@ -57,6 +57,8 @@ Neither this rule, nor technique [H69: Providing heading elements at the beginni
 
 ### Other Resources
 
+Test edit
+
 - [Understanding Success Criterion 2.4.1: Bypass Blocks][usc241]
 - [H69: Providing heading elements at the beginning of each section of content][h69]
 - [CSS Scoping (work in progress)](https://drafts.csswg.org/css-scoping/)
