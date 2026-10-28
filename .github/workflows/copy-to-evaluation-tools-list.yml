@@ -41,10 +41,14 @@ jobs:
           rm -rf "evaluation-tools/$DESTINATION_DIR"
           mkdir -p "evaluation-tools/$DESTINATION_DIR"
           cp -R "act-rules/$SOURCE_DIR" "evaluation-tools/$DESTINATION_DIR"
+
+      - name: Get SHA of the latest ${{ env.SOURCE_DIR }} commit
+        id: sha-retrieval
+        run: echo "SHA=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
        
       - name: Commit and push
         env:
-          COMMIT_MESSAGE: ACT updates from https://github.com/${{ github.repository }}/commit/$(git rev-parse --short HEAD)
+          COMMIT_MESSAGE: ACT updates from https://github.com/${{ github.repository }}/commit/${{ steps.sha-retrieval.outputs.SHA }}
         run: |
           echo "Commit"
           cd evaluation-tools
