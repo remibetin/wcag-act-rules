@@ -17,7 +17,7 @@ jobs:
       contents: read
     env:
       SOURCE_DIR: _data/wcag-act-rules/implementations
-      DESTINATION_REPO: w3c/wai-evaluation-tools-list
+      DESTINATION_REPO: remibetin/wai-evaluation-tools-list
       DESTINATION_BRANCH: master
       DESTINATION_DIR: _data/wai-evaluation-tools-list/act-implementations
 
@@ -43,8 +43,8 @@ jobs:
           cp -R "act-rules/$SOURCE_DIR" "evaluation-tools/$DESTINATION_DIR"
        
       - name: Commit and push
-        env: 
-          COMMIT_MESSAGE: ACT updates from https://github.com/${{ github.repository }}/commit/${{ github.sha }}
+        env:
+          COMMIT_MESSAGE: ACT updates from https://github.com/${{ github.repository }}/commit/$(git rev-parse --short HEAD)
         run: |
           echo "Commit"
           cd evaluation-tools
