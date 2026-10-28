@@ -32,6 +32,7 @@ jobs:
         id: sha-retrieval
         run: |
           cd act-rules/
+          echo "$(git rev-parse --short HEAD)"
           echo "SHA=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
 
       - name: Clone ${{ env.DESTINATION_REPO }}
